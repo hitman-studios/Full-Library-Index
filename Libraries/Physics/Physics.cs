@@ -1,6 +1,6 @@
 namespace Libraries.Physics;
 using Libraries;
-public static class Extensions
+public static class PhysicsExtensions
 {
   public static Coordinate GetCenterOfMass<T>(this T[] items) where T : IPhysical
   {

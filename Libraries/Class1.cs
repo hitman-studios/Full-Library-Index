@@ -133,5 +133,9 @@ public static class Extensions
     result.Sort();
     return result;
   }
+  public static void DisplayTODOs<T>(this T obj)
+  {
+    TODOAttribute.DisplayAll();
+  }
 }
 // [Syntax("Libraries.SyntaxInfo",)]

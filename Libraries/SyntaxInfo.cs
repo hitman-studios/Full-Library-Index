@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+[Syntax("SyntaxInfo","Libraries","This contains the syntax info that the SyntaxAttribute attribute has","Dan Budd")]
 public struct SyntaxInfo : IComparable<SyntaxInfo>, IEquatable<SyntaxInfo>
 {
   public SyntaxInfo(string Name, string Namespace, string Description, string Author, string[] Remarks)

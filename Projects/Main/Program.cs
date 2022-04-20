@@ -9,4 +9,5 @@ PhysicalContainer container = new PhysicalContainer();
 container.AddItem(new PhysicalItem(5.0,(2.0,4.0)),true);
 container.AddItem(new PhysicalItem(10.0,(1.0,10.0)),true);
 // SyntaxInfo? info;
-Libraries.Extensions.PrintSyntax<EquationModel>();
+Extensions.PrintSyntax<EquationModel>();
+4.DisplayTODOs();

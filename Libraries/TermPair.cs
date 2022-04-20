@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+[Obsolete("GeneralDatabase has already been deleted. There is no use for this anymore. Pending deletion.")]
 internal struct TermPair : IComparable<TermPair>
 {
   internal string Name { get; }

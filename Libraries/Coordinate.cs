@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+[Syntax("Coordinate","Libraries","A record struct that holds both x and y value.", "Dan Budd")]
 public record struct Coordinate(Number x, Number y) : IComparable<Coordinate>, IEquatable<Coordinate>
 {
   public Number x { get; set; } = x;

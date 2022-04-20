@@ -5,7 +5,12 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
 
-[Syntax("Number","Libraries","A multi-type number that converts to all numerical types other than long or decimal.","Dan Budd")]
+/**
+<summary>A muli-purpose numerical value that can convert to almost any types.<br/></summary>
+<remarks>Cannot convert to long, ulong, decimal, or BigInteger</remarks>
+*/
+[Syntax("Number","Libraries","A multi-type number that converts to and from all numerical types other than long, ulong, or decimal.","Dan Budd",
+       "Cannot convert to or from these types:\nlong,\nulong,\ndecimal")]
 public struct Number : IComparable<Number>, IEquatable<Number>
 {
   public double dValue;

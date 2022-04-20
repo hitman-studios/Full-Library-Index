@@ -45,6 +45,8 @@ public sealed class SyntaxAttribute : Attribute
     remarks = Remarks;
     SyntaxAttribute.allSyntax.Add(this.GetSyntax());
   }
+  ///<summary>Generates the text to display on for Extensions.PrintSyntax<T></summary>
+  ///<returns>The Text for Extensions.PrintSyntax<T></returns>
   public string GenerateOutput()
   {
     string output = $"Namespace: {@namespace}\nName: {name}\nDescription: {description}\nAuthor: {author}\n\t";
@@ -57,7 +59,7 @@ public sealed class SyntaxAttribute : Attribute
   }
   public SyntaxInfo GetSyntax() => new SyntaxInfo(name, @namespace, description, author, remarks);
   private static List<SyntaxInfo> allSyntax = new List<SyntaxInfo>();
-  public static SyntaxInfo[] GetAllSyntax() => allSyntax.ToArray();
+  public static SyntaxInfo[] GetAllSyntax() => allSyntax.ToArray().GetSorted();
   public static void PrintAllSyntax()
   {
     foreach(SyntaxInfo info in allSyntax)
