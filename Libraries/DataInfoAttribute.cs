@@ -18,11 +18,7 @@ public sealed class DataInfoAttribute : Attribute
     DataInfoAttribute.allDataInfo.Add(new DataInfo(ItemType,author,type));
   }
   private static List<DataInfo> allDataInfo = new List<DataInfo>();
-  public string GenerateOutput()
-  {
-    string output = $"Type: {ItemType}\nAuthor: {Author}\nData Type: {dataType}";
-    return "";
-  }
+  public string GenerateOutput()=> $"Type: {ItemType}\nAuthor: {Author}\nData Type: {dataType}";
 }
 public readonly struct DataInfo : IComparable<DataInfo>, IEquatable<DataInfo>
 {
