@@ -1,6 +1,7 @@
 namespace Libraries.Physics;
 using Libraries;
-public static class PhysicsExtensions
+using Libraries.Modeling;
+public static class PhysicsMethods
 {
   public static Coordinate GetCenterOfMass<T>(this T[] items) where T : IPhysical
   {
@@ -22,4 +23,10 @@ public static class PhysicsExtensions
   {
     return container.Remove(t);
   }
+  public static Number GetHeat(Number mass, Number specificHeat, Number temperatureChange)
+  {
+    return mass * specificHeat * temperatureChange;
+  }
+  // U = Q + W
+  // Q = mC * dT
 }

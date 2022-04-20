@@ -18,7 +18,7 @@ ToFunc()
 
 </remarks>
 */
-[Syntax("Libraries.Physics.EquationModel","The abstract model for making math equations. Does not use + or - or any other operations.", "Dan Budd","To Derive: You must override these abstract methods:","public abstract Libraries.Number Evaluate(Libraries.Number) <- the equation","public abstract string GetModelType() <- Gets the model type in a string.")]
+[Syntax("Libraries.Physics.EquationModel","Libraries.Physics","The abstract model for making math equations. Does not use + or - or any other operations.", "Dan Budd","To Derive: You must override these abstract methods:","public abstract Libraries.Number Evaluate(Libraries.Number) <- the equation","public abstract string GetModelType() <- Gets the model type in a string.")]
 public abstract class EquationModel
 {
   public Number this[Number index] => masterScale * Evaluate(index + masterOffset.x) + masterOffset.y;

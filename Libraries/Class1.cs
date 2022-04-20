@@ -6,6 +6,14 @@ using System.Runtime.InteropServices;
 namespace Libraries;
 public static class Extensions
 {
+  #nullable disable
+  public static T Find<T>(this T[] array, Predicate<T> condition) => array.ToList().Find(condition);
+  public static DataEntry<Value> ToDataEntry<Value>(this string key)
+  {
+    return new DataEntry<Value>(key);
+  }
+  #nullable enable
+  public static DataEntry<Value> ToDataEntry<Value>(this (string key, Value value_) pair) => new DataEntry<Value>(pair.key, pair.value_);
   internal static void Log(string message)
   {
     Console.WriteLine(message);
