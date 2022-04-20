@@ -6,6 +6,10 @@ using System.Runtime.InteropServices;
 namespace Libraries;
 public static class Extensions
 {
+  internal static void Log(string message)
+  {
+    Console.WriteLine(message);
+  }
   public static bool TryGetCustomAttribute<In,Attr>(out Attr? attr) where Attr : Attribute
   {
     var attributes = (Attr[])typeof(In).GetCustomAttributes(typeof(Attr),true);
