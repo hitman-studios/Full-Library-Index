@@ -11,3 +11,4 @@ container.AddItem(new PhysicalItem(10.0,(1.0,10.0)),true);
 // SyntaxInfo? info;
 Extensions.PrintSyntax<EquationModel>();
 4.DisplayTODOs();
+DataInfoAttribute.DisplayAll();
