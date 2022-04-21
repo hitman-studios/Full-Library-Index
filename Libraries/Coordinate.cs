@@ -10,7 +10,6 @@ namespace Libraries;
 
 
 
-
 </remarks>
 */
 [Syntax("Coordinate","Libraries","A record struct that holds both x and y value.", "Dan Budd")]

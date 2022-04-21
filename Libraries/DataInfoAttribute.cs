@@ -56,6 +56,7 @@ Recognized Data Types: "record","record struct", "record class","ref struct","st
 
 */
 [Serializable]
+[Syntax("DataInfo","Libraries","The data info that the DataInfoAttribute holds.","Dan Budd")]
 public readonly struct DataInfo : IComparable<DataInfo>, IEquatable<DataInfo>
 {
   public readonly string ItemName { get;}
