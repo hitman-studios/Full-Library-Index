@@ -7,7 +7,3 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System;
 namespace Libraries.Display;
-public static class dExtensions
-{
-  // public 
-}
