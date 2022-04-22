@@ -1,4 +1,4 @@
-run = "cd Libraries/ && dotnet build  && cd ../Projects/Main/ && dotnet run"
+run = "cd Libraries/ && dotnet build  && cd ~/Full-Library-Index/Tests/Test1/ && dotnet test && cd ~/Full-Library-Index/Projects/Main/ && dotnet run"
 entrypoint = "Libraries/Class1.cs"
 
 hidden = ["bin", "obj"]

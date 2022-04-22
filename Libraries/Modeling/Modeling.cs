@@ -1,6 +1,11 @@
 namespace Libraries.Modeling;
 using Libraries;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 public static class mExtensions
 {
 /**
@@ -382,6 +387,60 @@ Compatible modifiers are:
   public static bool IsEquationModifier(this string mod) => soloModifiers.Contains(mod) || dualModifiers.Contains(mod);
   public static bool IsSoloEquationModifier(this string mod) => soloModifiers.Contains(mod);
   public static bool IsDualEquationModifier(this string mod) => dualModifiers.Contains(mod);
+/**
+<summary>Enumerates over a given range at a given interval.</summary>
+// 
+*/
+  public static EquationEnumeration Enumerate(this Equation equation, Number min, Number max, [Optional]Number step)
+  {
+    return new EquationEnumeration(equation,min,max,step == 0.0 ? 1.0 : step);
+  }
+  public static void ForEach(this Equation equation, Action<Number> action, Number min, Number max, [Optional]Number step)
+  {
+    new EquationEnumeration(equation,min,max,step).ForEach(action);
+  }
+}
+public sealed class EquationEnumeration : IEnumerable
+{
+  public Equation equation { get; }
+  public Number min { get; }
+  public Number max { get; }
+  public Number step{ get; }
+  internal EquationEnumeration(Equation eq, Number min, Number max, Number step)
+  {
+    if(step == Double.PositiveInfinity || step == Double.NegativeInfinity || step == 0.0) throw new InvalidOperationException($"Step cannot be {step}.");
+    this.min = min;
+    this.max = max;
+    this.step = step;
+    equation = eq;
+  }
+  IEnumerator IEnumerable.GetEnumerator() => (IEnumerator)this.GetEnumerator();
+  public IEnumerator<Number> GetEnumerator()
+  {
+    if(step.IsPositive && step != Double.PositiveInfinity)
+    {
+      for(Number n = Math.Min(min,max); n < Math.Max(min,max); n+= step)
+      {
+        yield return equation(n);
+      }
+      // Step up
+    }
+    else
+    {
+      for(Number n = Math.Max(min,max); n < Math.Min(min,max); n+= step)
+      {
+        yield return equation(n);
+      }
+      // Step down
+    }
+  }
+  public void ForEach(Action<Number> action)
+  {
+    foreach(Number n in this)
+    {
+      action(n);
+    }
+  }
 }
 public static class DefaultEquations
 {
