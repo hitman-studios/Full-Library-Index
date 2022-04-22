@@ -2,14 +2,14 @@
 This is my current workspace in Replit (my school ide that I use). 
 ## Table of Contents <a name="ToC"/>
 ### **Namespaces:**
-- [**Libraries**](#l.Gen)
-- [**Libraries.Physics**](#l.P) <- WIP
-- [**Libraries.Modeling**](#l.M) <- WIP
-- [**Libraries.Display**](#l.D) <- Not created yet
-- [**Libraries.Events**](#l.E) <- Not created yet
-- [**Libraries.Input**](#l.I) <- Not created yet
+- [**Libraries**](#l.General)
+- [**Libraries.Physics**](#l.Physics) - WIP
+- [**Libraries.Modeling**](#l.Modeling) - WIP
+- [**Libraries.Display**](#l.Display) - Not created yet
+- [**Libraries.Events**](#l.Events) - Not created yet
+- [**Libraries.Input**](#l.Input) - Not created yet
 
-## **Libraries Namespace** <a name="l.Gen"/>
+## **Libraries Namespace** <a name="l.General"/>
 ***
 [Go To Top](#top)
 [Go Back To ToC](#ToC)
@@ -28,8 +28,8 @@ This is my current workspace in Replit (my school ide that I use).
 - *struct* Number
 - *struct* TermPair
 #### **Exceptions:** <a name="l.Gen.T.Exceptions"/>
-- ItemNameExistsException <- obsolete
-- SyntaxExistsException <- obsolete
+- ItemNameExistsException 
+- SyntaxExistsException 
 - UnknownKeyException
 - ReadOnlyException
 ### **Summary**
@@ -39,13 +39,24 @@ This is my current workspace in Replit (my school ide that I use).
             "Author","remark1","remark2","remarkN")]
 
 
-## **Libraries.Physics Namespace** <a name="l.P"/>
+## **Libraries.Physics Namespace** <a name="l.Physics"/>
+## **Libraries.Modeling Namespace** <a name="l.Modeling"/>
+#### **Attributes:** <a name="l.Modeling.T.Attributes"/>
+None Yet.
+#### **Classes/Structs/Enums/Records:** <a name="l.Modeling.T.Items"/>
+- *delegate* Equation
+- abstract class EquationModel
+- class ExponentialModel
+- class LinearModel
+- class LogisticModel
+- static class mExtensions
+- class QuadraticModel
+- class SineModel
+#### **Exceptions:** <a name="l.Modeling.T.Exceptions"/>
+None Yet.
+## **Libraries.Display Namespace** <a name="l.Display"/>
 ***
-## **Libraries.Modeling Namespace** <a name="l.M"/>
+## **Libraries.Events Namespace** <a name="l.Events"/>
 ***
-## **Libraries.Display Namespace** <a name="l.D"/>
-***
-## **Libraries.Events Namespace** <a name="l.E"/>
-***
-## **Libraries.Input Namespace** <a name="l.I"/>
+## **Libraries.Input Namespace** <a name="l.Input"/>
 ***
