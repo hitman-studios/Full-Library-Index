@@ -25,6 +25,7 @@ public struct Number : IComparable<Number>, IEquatable<Number>
   public Number(ushort d) => dValue = (double)d;
   public int CompareTo(Number other) => dValue.CompareTo(other.dValue);
   public bool Equals(Number other) => dValue == other.dValue;
+  public override string ToString() {return IsInteger ? $"{iValue}" : $"{dValue}"; }
   public override int GetHashCode() => HashCode.Combine<double>(dValue);
   public override bool Equals(object? other) => other != null && other is Number n ? this.Equals(n) : false;
   public bool IsInteger {get  => dValue % 1.0 == 0.0;}
@@ -32,7 +33,12 @@ public struct Number : IComparable<Number>, IEquatable<Number>
   public bool IsPositive { get => Sign == 1;}
   public bool IsNegative { get => Sign == -1;}
   public bool IsZero { get => dValue == 0.0;}
-  public override string ToString() {return IsInteger ? $"{iValue}" : $"{dValue}"; }
+  public static Number Sum(params Number[] ns)
+  {
+    Number result = 0.0;
+    foreach(var n in ns) { result += n; }
+    return result;
+  }
   public static bool operator ==(Number n1, Number n2) => n1.Equals(n2);
   public static bool operator !=(Number n1, Number n2) => !n1.Equals(n2);
   public static bool operator <(Number n1, Number n2) => n1.CompareTo(n2) < 0;

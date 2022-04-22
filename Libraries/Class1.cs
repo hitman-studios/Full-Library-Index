@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+[WIP]
 [TODO("Add documentation.")]
 public static class Extensions
 {
@@ -24,6 +25,15 @@ public static class Extensions
     retValue = result;
     return output;
   }
+  [TODO("ADD DOCUMENTATION")]
+  public static Number ToNumber(this int i) => (Number)i;
+  public static Number ToNumber(this uint i) => (Number)i;
+  public static Number ToNumber(this short i) => (Number)i;
+  public static Number ToNumber(this ushort i) => (Number)i;
+  public static Number ToNumber(this byte i) => (Number)i;
+  public static Number ToNumber(this sbyte i) => (Number)i;
+  public static Number ToNumber(this float i) => (Number)i;
+  public static Number ToNumber(this double i) => (Number)i;
 /**
 <summary>Creates a new DataEntry<Value> with the default value for "Value"</summary>
 <typeparam name="Value">The Value to hold</typeparam>
