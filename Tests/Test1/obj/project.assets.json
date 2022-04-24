@@ -3871,19 +3871,19 @@
     ]
   },
   "packageFolders": {
-    "/home/runner/.nuget/packages/": {}
+    "C:\\Users\\Danny\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/Full-Library-Index/Tests/Test1/Test1.csproj",
+      "projectUniqueName": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Tests\\Test1\\Test1.csproj",
       "projectName": "Test1",
-      "projectPath": "/home/runner/Full-Library-Index/Tests/Test1/Test1.csproj",
-      "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/Full-Library-Index/Tests/Test1/obj/",
+      "projectPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Tests\\Test1\\Test1.csproj",
+      "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Tests\\Test1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/runner/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -3895,8 +3895,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/runner/Full-Library-Index/Libraries/Libraries.csproj": {
-              "projectPath": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj"
+            "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj": {
+              "projectPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj"
             }
           }
         }
@@ -3943,7 +3943,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/nix/store/jsm5am5i2b2izvwzbw5h6lk3plvpkrlw-dotnet-sdk-6.0.100/sdk/6.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

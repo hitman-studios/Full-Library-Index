@@ -10,3 +10,15 @@
 /home/runner/Full-Library-Index/Libraries/obj/Debug/net6.0/Libraries.dll
 /home/runner/Full-Library-Index/Libraries/obj/Debug/net6.0/ref/Libraries.dll
 /home/runner/Full-Library-Index/Libraries/obj/Debug/net6.0/Libraries.pdb
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\bin\Debug\net6.0\Libraries.deps.json
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\bin\Debug\net6.0\Libraries.dll
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\bin\Debug\net6.0\Libraries.pdb
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.csproj.AssemblyReference.cache
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.AssemblyInfoInputs.cache
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.AssemblyInfo.cs
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.csproj.CoreCompileInputs.cache
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.dll
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\refint\Libraries.dll
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\Libraries.pdb
+C:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\obj\Debug\net6.0\ref\Libraries.dll

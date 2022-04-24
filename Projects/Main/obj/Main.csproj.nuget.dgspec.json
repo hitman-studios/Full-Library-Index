@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/Full-Library-Index/Projects/Main/Main.csproj": {}
+    "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Projects\\Main\\Main.csproj": {}
   },
   "projects": {
-    "/home/runner/Full-Library-Index/Libraries/Libraries.csproj": {
+    "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj",
+        "projectUniqueName": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj",
         "projectName": "Libraries",
-        "projectPath": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/Full-Library-Index/Libraries/obj/",
+        "projectPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,21 +52,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/jsm5am5i2b2izvwzbw5h6lk3plvpkrlw-dotnet-sdk-6.0.100/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/runner/Full-Library-Index/Projects/Main/Main.csproj": {
+    "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Projects\\Main\\Main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/Full-Library-Index/Projects/Main/Main.csproj",
+        "projectUniqueName": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Projects\\Main\\Main.csproj",
         "projectName": "Main",
-        "projectPath": "/home/runner/Full-Library-Index/Projects/Main/Main.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/Full-Library-Index/Projects/Main/obj/",
+        "projectPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Projects\\Main\\Main.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Projects\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -78,8 +78,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/runner/Full-Library-Index/Libraries/Libraries.csproj": {
-                "projectPath": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj"
+              "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj": {
+                "projectPath": "C:\\Users\\Danny\\.vscode\\repos\\Full-Library-Index\\Libraries\\Libraries.csproj"
               }
             }
           }
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/jsm5am5i2b2izvwzbw5h6lk3plvpkrlw-dotnet-sdk-6.0.100/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

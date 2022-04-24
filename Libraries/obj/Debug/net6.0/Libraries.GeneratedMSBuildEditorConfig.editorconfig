@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Libraries
-build_property.ProjectDir = /home/runner/Full-Library-Index/Libraries/
+build_property.ProjectDir = c:\Users\Danny\.vscode\repos\Full-Library-Index\Libraries\
