@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
 /**
-<summary></summary>
+<summary>Holds both a x and y Number value.</summary>
 <remarks>
 
 

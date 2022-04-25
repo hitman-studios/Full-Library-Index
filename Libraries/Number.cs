@@ -26,6 +26,7 @@ public struct Number : IComparable<Number>, IEquatable<Number>
   public int CompareTo(Number other) => dValue.CompareTo(other.dValue);
   public bool Equals(Number other) => dValue == other.dValue;
   public override string ToString() {return IsInteger ? $"{iValue}" : $"{dValue}"; }
+  public string ToString(int @base) => Convert.ToString(iValue,@base);
   public override int GetHashCode() => HashCode.Combine<double>(dValue);
   public override bool Equals(object? other) => other != null && other is Number n ? this.Equals(n) : false;
   public bool IsInteger {get  => dValue % 1.0 == 0.0;}

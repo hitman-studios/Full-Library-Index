@@ -4,6 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+/**
+<summary>Declares what needs to be done. Should be paired with <see cref="WIPAttribute"/></summary>
+<remarks><c>AllowMultiple=true</c>, <c>Inherited=false</c></remarks>
+*/
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited=false)]
 public sealed class TODOAttribute : Attribute
 {
@@ -13,7 +17,6 @@ public sealed class TODOAttribute : Attribute
   public TODOAttribute(string msg)
   {
     message = msg;
-    Console.WriteLine(msg);
     _messages.Add($"TODO: {msg}");
   }
   public static void DisplayAll()

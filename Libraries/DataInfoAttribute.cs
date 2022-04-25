@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
 /**
-<summary></summary>
+<summary>Contains info about a class that is being worked on.</summary>
 <remarks>
 
 

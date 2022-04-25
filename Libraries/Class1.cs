@@ -26,13 +26,25 @@ public static class Extensions
     return output;
   }
   [TODO("ADD DOCUMENTATION")]
+  public static string ToString(this INumber i, int @base)
+  {
+    return i.ToNumber().ToString(@base);
+  }
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this int i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this uint i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this short i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this ushort i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this byte i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this sbyte i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this float i) => (Number)i;
+  [TODO("ADD DOCUMENTATION")]
   public static Number ToNumber(this double i) => (Number)i;
 /**
 <summary>Creates a new DataEntry<Value> with the default value for "Value"</summary>
@@ -73,7 +85,9 @@ public static class Extensions
     i = synAttr != null ? ((SyntaxAttribute)synAttr).GetSyntax() : null;
     return output;
   }
-  [TODO("Add documentation.")]
+/**
+<summary></summary>
+*/
   public static Out[] Pull<In,Out>(this In[] list, Func<In,Out> m)
   {
     List<Out> output = new List<Out>();

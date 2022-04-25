@@ -1,0 +1,2 @@
+first: Libraries/Libraries.csproj
+next: RazorLibraries/RazorLibraries.sln

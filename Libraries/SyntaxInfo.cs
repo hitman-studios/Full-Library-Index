@@ -4,10 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 namespace Libraries;
+/**
+<summary>This contains the information that the <see cref="SyntaxAttribute"/> holds.</summary>
+<remarks>
+</remarks>
+*/
 [Syntax("SyntaxInfo","Libraries","This contains the syntax info that the SyntaxAttribute attribute has","Dan Budd")]
 public struct SyntaxInfo : IComparable<SyntaxInfo>, IEquatable<SyntaxInfo>
 {
-  public SyntaxInfo(string Name, string Namespace, string Description, string Author, string[] Remarks)
+  internal SyntaxInfo(string Name, string Namespace, string Description, string Author, string[] Remarks)
   {
     name = Name;
     description = Description;
@@ -15,10 +20,15 @@ public struct SyntaxInfo : IComparable<SyntaxInfo>, IEquatable<SyntaxInfo>
     author = Author;
     remarks = Remarks;
   }
+  ///<summary>The name of the item</summary>
   public string name { get; }
+  ///<summary>The description of the item</summary>
   public string description { get; }
+  ///<summary>The author of the item</summary>
   public string author { get; }
+  ///<summary>The namespace of the item</summary>
   public string @namespace { get; }
+  ///<summary>Any additional remarks.</summary>
   public string[] remarks { get; }
   public int CompareTo(SyntaxInfo other)
   {
