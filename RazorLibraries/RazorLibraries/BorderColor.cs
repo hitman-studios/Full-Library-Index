@@ -1,99 +1,110 @@
+[assembly: TODO("ADD DOCUMENTATION.")]
 namespace RazorLibraries;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using Libraries;
-public sealed class BorderColor
+[TODO("ADD DOCUMENTATION.")]
+public sealed class BorderColor : IComponentStyle
 {
-  internal ColorType colorType { get; private set; }
-  public int Red { get => GetRed(); }
-  public int Green { get => GetGreen();}
-  public int Blue { get => GetBlue(); }
-  public int Alpha { get; private set; }
-  public int Hue { get => GetHue(); }
-  public int Saturation { get => GetSaturation(); }
-  public int Lightness { get => GetLightness(); }
-  public static BorderColor RGB(int r, int g, int b) => new BorderColor(ColorType.RGB,r,g,b);
-  public static BorderColor RGBA(int r, int g, int b, int a) => new BorderColor(ColorType.RGBA, r,g,b,a);
-  public static BorderColor HSL(int h, int s, int l) => new BorderColor(ColorType.HSL, h, s, l);
-  public static BorderColor HSLA(int h, int s, int l, int a) => new BorderColor(ColorType.HSLA, h, s, l, a);
-  public static BorderColor HEX(string hex) => new BorderColor(ColorType.HEX,hex);
-  public static 
-  [TODO("include ColorType implementation.")]
-  public int GetRed()
+  [TODO("ADD DOCUMENTATION.")]
+  public string hexCode { get; }
+  [TODO("ADD DOCUMENTATION.")]
+  public byte red { get; }
+  [TODO("ADD DOCUMENTATION.")]
+  public byte blue { get; }
+  [TODO("ADD DOCUMENTATION.")]
+  public byte green { get; }
+  [TODO("ADD DOCUMENTATION.")]
+  public ColorType colorType { get; }
+  [TODO("ADD DOCUMENTATION.")]
+  private BorderColor(string hex)
   {
-    if(!(IsRGB || this.IsRGBA)) throw new InvalidColorException(colorType);
-    else return parameter1;
-  }
-  [TODO("include ColorType implementation.")]
-  public int GetGreen()
-  {
-    if(!(IsRGB || this.IsRGBA)) throw new InvalidColorException(colorType);
-    else return parameter2;
-  }
-  [TODO("include ColorType implementation.")]
-  public int GetBlue()
-  {
-    if(!(IsRGB || this.IsRGBA)) throw new InvalidColorException(colorType);
-    else return parameter3;
-  }
-  [TODO("include ColorType implementation.")]
-  public int GetHue()
-  {
-    if(!(IsHSL || this.IsHSLA)) throw new InvalidColorException(colorType);
-    else return parameter1;
-  }
-  [TODO("include ColorType implementation.")]
-  public int GetSaturation()
-  {
-    if(!(IsHSL || this.IsHSLA)) throw new InvalidColorException(colorType);
-    else return parameter2;
-  }
-  [TODO("include ColorType implementation.")]
-  public int GetLightness()
-  {
-    if(!(IsHSL || this.HSLA)) throw new InvalidColorException(colorType);
-    else return parameter3;
-  }
-  public string HexCode
-  {
-    get
+    if(hex.Equals("Inherit"))
     {
-      if(!IsHex) throw new InvalidColorException(colorType);
-      else return hex;
+      colorType = ColorType.Inherit;
+      red = 0;
+      blue = 0;
+      green = 0;
+      hexCode = "Inherit";
+    }
+    else if(hex.Equals("Initial"))
+    {
+      colorType = ColorType.Initial;
+      hexCode = "Initial";
+      green = 0;
+      blue = 0;
+      red = 0;
+    }
+    else
+    {
+      colorType = ColorType.HexCode;
+      var input = Setup(hex);
+      red = input.r;
+      blue = input.b;
+      green = input.g;
+      hexCode = hex;
     }
   }
-  private string hex = "";
-  private int parameter1;
-  private int parameter2;
-  private int parameter3;
-  private BorderColor(ColorType type, int par1, int par2, int par3, int? alpha = null)
+  private BorderColor
+  (byte r, byte g, byte b)
   {
-    colorType = type;
-    parameter1 = par1;
-    parameter2 = par2;
-    parameter3 = par3;
-    Alpha = alpha != null ? alpha : 100;
+    colorType = ColorType.RGB;
+    hexCode = rgbToHex(r,g,b);
+    red = r;
+    blue = b;
+    green = g;
   }
-  public bool IsRGB => color.type == ColorType.RGB;
-  public bool IsRGBA => color.type == ColorType.RGBA;
-  public bool IsHSL => color.type == ColorType.HSL;
-  public bool IsHSLA => color.type == ColorType.HSLA;
-  public static bool IsHex(BorderColor color) => color.type == ColorType.HEX;
-}
-internal enum ColorType
-{
-HEX = 0,
-RGB = 1,
-HSL = 2,
-RGBA = 3,
-HSLA = 4
-}
-public class InvalidColorTypeException() : Exception
-{
-  public InvalidColorTypeException() : base("Invalid Permissions (Different Color Type)") {}
-  public InvalidColorTypeException(Exception inner) : base("Invalid Permissions (Different Color Type)", inner) {}
-  public InvalidColorTypeException(ColorType type, Exception inner) : base($"Expected {type.GetParameters()}", inner) {}
+  public static BorderColor RGB(byte r, byte g, byte b)
+  {
+    return new BorderColor(r,g,b);
+  }
+  public static BorderColor HEX(string hex)
+  {
+    return new BorderColor(hex);
+  }
+  public static BorderColor Inherit() => new BorderColor("Inherit");
+  public static BorderColor Initial() => new BorderColor("Initial");
+  private string rgbToHex(byte r, byte g, byte b)
+  {
+    return Convert.ToString(r,16) + Convert.ToString(g,16) + Convert.ToString(b,16);
+  }
+  private (byte r, byte g, byte b) Setup(string hex)
+  {
+    byte r = 0;
+    byte g = 0;
+    byte b = 0;
+    switch(hex.Length)
+    {
+      case 3:
+        r = Convert.ToByte(hex[0].ToString(),16);
+        g = Convert.ToByte(hex[1].ToString(),16);
+        b = Convert.ToByte(hex[2].ToString(),16);
+        break;
+      case 6:
+        r = Convert.ToByte(hex.Substring(0,2),16);
+        g = Convert.ToByte(hex.Substring(2,2),16);
+        b = Convert.ToByte(hex.Substring(4,2),16);
+        break;
+      default:
+        break;
+    }
+    return (r,g,b);
+  }
+  public enum ColorType
+  {
+    HexCode = 0,
+    RGB = 1,
+    Inherit = 2,
+    Initial = 3
+  }
+  public bool IsInherit => hexCode.Equals("Inherit");
+  public bool IsInitial => hexCode.Equals("Initial");
+  public string GenerateCSS() => IsInitial ? "initial " : IsInherit ? "inherit " : IsHex ? $"#{hexCode}" : $"rgb({red},{blue},{green})";
+  public bool IsRGB => colorType == ColorType.RGB;
+  public bool IsHex => colorType == ColorType.HexCode;
 }

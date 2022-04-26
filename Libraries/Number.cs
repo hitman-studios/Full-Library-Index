@@ -11,7 +11,7 @@ namespace Libraries;
 */
 [Syntax("Number","Libraries","A multi-type number that converts to and from all numerical types other than long, ulong, or decimal.","Dan Budd",
        "Cannot convert to or from these types:\nlong,\nulong,\ndecimal")]
-public struct Number : IComparable<Number>, IEquatable<Number>
+public struct Number : IComparable<Number>, IEquatable<Number>, IEquatable<INumber>, IComparable<INumber>, INumber
 {
   public double dValue;
   public int iValue { get => (int)Math.Round(dValue); set => dValue = (double)value; }
@@ -23,10 +23,14 @@ public struct Number : IComparable<Number>, IEquatable<Number>
   public Number(float d) => dValue = (double)d;
   public Number(short d) => dValue = (double)d;
   public Number(ushort d) => dValue = (double)d;
+  public int CompareTo(INumber? other) => other != null ? this.CompareTo(other.ToNumber()) : 1;
+  public bool Equals(INumber? other) => other != null && this.Equals(other.ToNumber());
+  public Number ToNumber() => this;
   public int CompareTo(Number other) => dValue.CompareTo(other.dValue);
   public bool Equals(Number other) => dValue == other.dValue;
   public override string ToString() {return IsInteger ? $"{iValue}" : $"{dValue}"; }
   public string ToString(int @base) => Convert.ToString(iValue,@base);
+  public string ToHex() => Convert.ToString(iValue,16);
   public override int GetHashCode() => HashCode.Combine<double>(dValue);
   public override bool Equals(object? other) => other != null && other is Number n ? this.Equals(n) : false;
   public bool IsInteger {get  => dValue % 1.0 == 0.0;}

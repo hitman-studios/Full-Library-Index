@@ -7,4 +7,6 @@ using System.Threading.Tasks;
 internal interface IComponentStyle
 {
   string GenerateCSS();
+  bool IsInitial { get; }
+  bool IsInherit { get; }
 }

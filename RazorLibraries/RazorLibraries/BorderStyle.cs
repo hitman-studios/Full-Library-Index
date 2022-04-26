@@ -1,3 +1,4 @@
+[assembly: TODO("ADD DOCUMENTATION.")]
 namespace RazorLibraries;
 using System;
 using System.Collections;
@@ -9,16 +10,18 @@ using System.Threading.Tasks;
 */
 public enum BorderStyle
 {
-  None = 0,
-  Dotted = 1,
-  Dashed = 2,
-  Solid = 3,
-  @Double = 4,
-  Groove = 5,
-  Ridge = 6,
-  Inset = 7,
-  Outset = 8,
-  Hidden = 9
+  Inherit = 0,
+  Initial = 1,
+  None = 2,
+  Dotted = 3,
+  Dashed = 4,
+  Solid = 5,
+  @Double = 6,
+  Groove = 7,
+  Ridge = 8,
+  Inset = 9,
+  Outset = 10,
+  Hidden = 11
 }
 public static class Measurements
 {
@@ -38,42 +41,41 @@ public static class Measurements
   {
     return Measurement.Create(n,s);
   }
-  public static string GetParameters(this ColorType type)
-  {
-    switch(type)
-    {
-      case ColorType.HEX:
-        return "HexCode";
-      case ColorType.RGB:
-        return "Red, Green, or Blue";
-      case ColorType.RGBA:
-        return "Red, Green, Blue, or Alpha";
-      case ColorType.HSL:
-        return "Hue, Saturation, or Lightness";
-      case ColorType.HSLA:
-        return "Hue, Saturation, Lightness, or Alpha";
-      default:
-        return "W H A T";
-    }
-  }
 }
 public readonly struct Measurement : INumber, IEquatable<Measurement>,IEquatable<Number>,IEquatable<INumber>, IComparable<Measurement>,IComparable<Number>,IComparable<INumber>, IComponentStyle
 {
-  public string GenerateCSS() => $"{Value.ToString()} {measurement}";
+  public string GenerateCSS() => IsInherit ? "inherit" : IsInitial ? "initial" : $"{Value.ToString()} {measurement}";
   public readonly Number Value { get; }
   public readonly string measurement { get; }
   private Measurement(Number v, string m)
   {
-    Value = Math.Abs(v.dValue);
-    measurement = m;
+    if(v < 0.0)
+    {
+      measurement = "Inherit";
+      Value = 0;
+    }
+    else if(v == 0.0) 
+    {
+      measurement = "Initial";
+      Value = 0;
+    }
+    else
+    {
+      measurement = m;
+      Value = Math.Abs(v.dValue);
+    }
   }
   public static Measurement Create(Number n, string s)
   {
-    if(!s.IsMeasurement()) throw new Exception("Invalid measurement type.");
-    else return new Measurement(n,s);
+    if(!s.ToLower().IsMeasurement()) throw new Exception("Invalid measurement type.");
+    else return new Measurement(n,s.ToLower());
   }
+  public static Measurement Inherit() => new Measurement(-1.0,"");
+  public static Measurement Initial() => new Measurement(0.0,"");
   public Number ToNumber() => Value;
-  public override string ToString() => $"{Value.iValue} {measurement}";
+  public bool IsInitial => Value == 0.0d;
+  public bool IsInherit => Value < 0.0d;
+  public override string ToString() => IsInherit ? "Inherit" : IsInitial ? "Initial" : $"{Value.iValue} {measurement}";
   // public override bool Equals(object obj) => 
   public bool Equals(Measurement other) => Value == other.Value && measurement.Equals(other.measurement);
   public bool Equals(Number other) => Value == other;

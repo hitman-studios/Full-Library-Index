@@ -31,7 +31,7 @@ public struct PolynomialElement : IComparable<PolynomialElement>, IEquatable<Pol
   }
   public override bool Equals(object? other) => other != null && other is PolynomialElement e ? this.Equals(e) : false;
   public override int GetHashCode() => HashCode.Combine<Number,Number>(exponent,coefficient);
-  public override string ToString() => $"{coefficient.ToString()}x^{exponent.ToString}";
+  public override string ToString() => $"{coefficient.ToString()}x^{exponent.ToString()}";
   public static implicit operator PolynomialElement((Number c, Number e) setup) => new PolynomialElement(setup.c, setup.e);
 }
 public sealed class Monomial
