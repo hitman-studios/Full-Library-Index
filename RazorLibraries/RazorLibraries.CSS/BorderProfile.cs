@@ -1,5 +1,5 @@
 [assembly: TODO("ADD DOCUMENTATION.")]
-namespace RazorLibraries;
+namespace RazorLibraries.CSS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,20 +7,20 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using Libraries;
-[TODO("ADD DOCUMENTATION")]
-public enum BorderSide
-{
-all = 0,
-vertical = 1,
-horizontal=2,
-top  = 3,
-right =4,
-bottom=5,
-left = 6
-}
 [TODO("ADD DOCUMENTATION.")]
-public sealed class BorderProfile : IComponentStyle
+public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
 {
+  public int CompareTo(BorderProfile? p)
+  {
+    if(p != null)
+    {
+    int c0 = borderStyle.CompareTo(p.borderStyle);
+    int c1 = borderWidth.CompareTo(p.borderWidth);
+    int c2 = borderColor.CompareTo(p.borderColor);
+    return c0 != 0 ? c0 : c1 != 0 ? c1 : c2;
+    }
+    else return 1;
+  }
   public BorderStyle borderStyle { get; private set;}
   public Measurement borderWidth { get; private set;}
   public BorderColor borderColor { get; private set; }
@@ -41,6 +41,12 @@ public sealed class BorderProfile : IComponentStyle
     borderStyle = style;
     borderWidth = Measurement.Inherit();
     borderColor = BorderColor.HEX(hex);
+  }
+  private BorderProfile(BorderStyle style, Measurement measurement)
+  {
+    borderStyle = style;
+    borderWidth = measurement;
+    borderColor = BorderColor.Inherit();
   }
   private BorderProfile(BorderStyle style, BorderColor color)
   {
@@ -65,6 +71,22 @@ public sealed class BorderProfile : IComponentStyle
   public static BorderProfile Create(BorderStyle style, Number length, string mType)
   {
     return new BorderProfile(style,Measurement.Create(length,mType));
+  }
+  public static BorderProfile Create(BorderStyle style, Measurement measurement, BorderColor color)
+  {
+    return new BorderProfile(style,measurement, color);
+  }
+  public static BorderProfile Create(BorderStyle style, Measurement measurement)
+  {
+    return new BorderProfile(style,measurement);
+  }
+  public static BorderProfile Create(BorderStyle style, Number length, string mT, byte r, byte g, byte b)
+  {
+    return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.RGB(r,g,b));
+  }
+  public static BorderProfile Create(BorderStyle style, Number length, string mT, string hex)
+  {
+    return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.HEX(hex));
   }
   public BorderProfile SetColor(string hex)
   {
@@ -98,7 +120,7 @@ public sealed class BorderProfile : IComponentStyle
   }
   public bool IsInitial => borderStyle == BorderStyle.Initial;
   public bool IsInherit => borderStyle == BorderStyle.Inherit;
-  public string GenerateCSS() => IsInitial ? "initial" : IsInherit ? "inherit" : HasBorder ?  $"border: {borderWidth.GenerateCSS()} {borderStyleCSS} {borderColorCSS}" : "none";
+  public string GenerateCSS() => IsInitial ? "initial" : IsInherit ? "inherit" : HasBorder ?  $"{borderWidth.GenerateCSS()} {borderStyleCSS} {borderColorCSS}" : "none";
   public string borderColorCSS => borderColor.GenerateCSS();
   public string borderWidthCSS => borderWidth.GenerateCSS();
   public string borderStyleCSS => borderStyle.ToString().ToLower();

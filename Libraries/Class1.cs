@@ -8,6 +8,14 @@ namespace Libraries;
 [TODO("Add documentation.")]
 public static class Extensions
 {
+  public static bool IsNull<T>(this T? obj)
+  {
+    return obj != null;
+  }
+  public static TValue ToItem<TValue>(this DataEntry<TValue> entry)
+  {
+    return entry.Value;
+  }
   #nullable disable
 /**
 <summary></summary>
