@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zCNpW43sdaF8N6MlqhfBKsX+ldY3wSX8OhbHKHxZld0=",
+  "Hash": "ClU/5X1CwAoNpvKp3dcWlAp2v1V6W3Q92S4Bjb9/acg=",
   "Source": "RazorLibraries.CSS",
   "BasePath": "_content/RazorLibraries.CSS",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "RazorLibraries",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "TargetFramework;RuntimeIdentifier"
     }
   ],

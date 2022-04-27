@@ -1,11 +1,11 @@
 [assembly: TODO("FINISH BUILDER!!")]
+namespace RazorLibraries.CSS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Libraries;
-namespace RazorLibraries.CSS;
 public sealed class CSSBuilder
 {
   private bool buildable { get;}
@@ -31,7 +31,7 @@ public sealed class CSSBuilder
   {
     return new CSSBuilder(BorderSet.Create(a,b,c,d));
   }
-  public sealed class BuilderInternals
+  public sealed class BuilderInternals : IDisposable
   {
     private BorderProfile? top = null;
     private BorderProfile? right = null;
@@ -40,6 +40,29 @@ public sealed class CSSBuilder
     internal BuilderInternals()
     {
       // 
+    }
+    ~BuilderInternals()
+    {
+      Dispose();
+    }
+    public void Dispose()
+    {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+    }
+    private bool _disposed = false;
+    void Dispose(bool disposing)
+    {
+      if(_disposed) return;
+      if(disposing)
+      {
+        // TODO: dispose managed state
+      }
+      top = null;
+      left = null;
+      right = null;
+      bottom = null;
+      _disposed = true;
     }
     private BuilderInternals(BorderProfile? t = null, BorderProfile? r = null, BorderProfile? b = null, BorderProfile? l = null)
     {
@@ -50,11 +73,13 @@ public sealed class CSSBuilder
     }
     public BuilderInternals WithLeftBorder(BorderProfile left)
     {
-      return new BuilderInternals(top,right,bottom,left);
+      this.left = left;
+      return this;
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width, BorderColor color)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,color));
+      this.left = BorderProfile.Create(style,width,color);
+      return this;
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType, BorderColor color)
     {
@@ -136,29 +161,115 @@ public sealed class CSSBuilder
     {
       return new BuilderInternals(top,BorderProfile.Create(style,m,c));
     }
-    // public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, string hex){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Measurement m){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, string hex){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType){}
-    // public BuilderInternals WithRightBorder(BorderStyle style, BorderColor color) {}
-    // public BuilderInternals WithRightBorder(BorderStyle style, string hex) {}
-    // public BuilderInternals WithRightBorder(BorderStyle style, byte r, byte g, byte b) {}
-    // public BuilderInternals WithRightBorder(BorderStyle style) {}
-    // public BuilderInternals WithRightBorder(Measurement m, BorderColor color){}
-    // public BuilderInternals WithRightBorder(Measurement m, string hex){}
-    // public BuilderInternals WithRightBorder(Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithRightBorder(Measurement m){}
-    // public BuilderInternals WithRightBorder(Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithRightBorder(Number width, string mType, string hex){}
-    // public BuilderInternals WithRightBorder(Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithRightBorder(Number width, string mType){}
-    // public BuilderInternals WithRightBorder(BorderColor color) {}
-    // public BuilderInternals WithRightBorder(string hex) {}
-    // public BuilderInternals WithRightBorder(byte r, byte g, byte b) {}
-    // public BuilderInternals WithRightBorder() {}
+    public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, string hex)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.HEX(hex)),bottom,left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, byte r, byte g, byte b)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.RGB(r,g,b)),bottom, left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Measurement m)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.Inherit()),bottom,left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, BorderColor c)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),c),bottom,left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, string hex)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.HEX(hex)),bottom,left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b)
+    {
+      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.RGB(r,g,b)),bottom, left);
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType)
+    {
+      right = BorderProfile.Create(style,Measurement.Create(width,mType));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, BorderColor color) 
+    {
+      right = BorderProfile.Create(style,Measurement.Inherit(),color);
+      return this;
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, string hex) 
+    {
+      right = BorderProfile.Create(style, Measurement.Inherit(),BorderColor.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style, byte r, byte g, byte b)
+    {
+      right = BorderProfile.Create(style, Measurement.Inherit(), BorderColor.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(BorderStyle style) 
+    {
+      right = BorderProfile.Create(style, Measurement.Inherit(), BorderColor.Inherit());
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Measurement m, BorderColor color)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit,m, color);
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Measurement m, string hex)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Measurement m, byte r, byte g, byte b)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Measurement m)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, m);
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Number width, string mType, BorderColor c)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType), c);
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Number width, string mType, string hex)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType), BorderColor.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Number width, string mType, byte r, byte g, byte b)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width, mType), BorderColor.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(Number width, string mType)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(BorderColor color)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), color);
+      return this;
+    }
+    public BuilderInternals WithRightBorder(string hex)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), BorderColor.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithRightBorder(byte r, byte g, byte b)
+    {
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), BorderColor.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithRightBorder()
+    {
+      right = BorderProfile.Inherit();
+      return this;
+    }
     // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, string hex){}
     // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, byte r, byte g, byte b){}
     // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m){}
@@ -213,10 +324,12 @@ public sealed class CSSBuilder
     {
       return new BuilderInternals(top,right,bottom,left);
     }
+    #nullable disable
     public CSSBuilder EndCreation()
     {
       return new CSSBuilder(BorderSet.Create(top,right,bottom,left));
     }
+    #nullable enable
   }
   public BuilderInternals StartCreation()
   {

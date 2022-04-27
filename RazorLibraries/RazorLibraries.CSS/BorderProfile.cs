@@ -60,6 +60,18 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
     borderWidth = Measurement.Inherit();
     borderColor = BorderColor.RGB(r,g,b);
   }
+  private BorderProfile(Measurement m, BorderColor c)
+  {
+    borderStyle = BorderStyle.Inherit;
+    borderWidth = m;
+    borderColor = c;
+  }
+  private BorderProfile(Measurement m)
+  {
+    borderStyle = BorderStyle.Inherit;
+    borderWidth = m;
+    borderColor = BorderColor.Inherit();
+  }
   public static BorderProfile Inherit()
   {
     return new BorderProfile(BorderStyle.Inherit,Measurement.Inherit(),BorderColor.Inherit());
@@ -68,26 +80,34 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
   {
     return new BorderProfile(BorderStyle.Initial,Measurement.Initial(),BorderColor.Initial());
   }
-  public static BorderProfile Create(BorderStyle style, Number length, string mType)
+  public static BorderProfile Create(BorderStyle style, Measurement m, BorderColor color)
   {
-    return new BorderProfile(style,Measurement.Create(length,mType));
+    return new BorderProfile(style,m,color);
   }
-  public static BorderProfile Create(BorderStyle style, Measurement measurement, BorderColor color)
+  public static BorderProfile Create(BorderStyle style, Measurement m)
   {
-    return new BorderProfile(style,measurement, color);
+    return new BorderProfile(style,m,BorderColor.Inherit());
   }
-  public static BorderProfile Create(BorderStyle style, Measurement measurement)
-  {
-    return new BorderProfile(style,measurement);
-  }
-  public static BorderProfile Create(BorderStyle style, Number length, string mT, byte r, byte g, byte b)
-  {
-    return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.RGB(r,g,b));
-  }
-  public static BorderProfile Create(BorderStyle style, Number length, string mT, string hex)
-  {
-    return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.HEX(hex));
-  }
+  // public static BorderProfile Create(BorderStyle style, Number length, string mType)
+  // {
+  //   return new BorderProfile(style,Measurement.Create(length,mType));
+  // }
+  // public static BorderProfile Create(BorderStyle style, Measurement measurement, BorderColor color)
+  // {
+  //   return new BorderProfile(style,measurement, color);
+  // }
+  // public static BorderProfile Create(BorderStyle style, Measurement measurement)
+  // {
+  //   return new BorderProfile(style,measurement);
+  // }
+  // public static BorderProfile Create(BorderStyle style, Number length, string mT, byte r, byte g, byte b)
+  // {
+  //   return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.RGB(r,g,b));
+  // }
+  // public static BorderProfile Create(BorderStyle style, Number length, string mT, string hex)
+  // {
+  //   return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.HEX(hex));
+  // }
   public BorderProfile SetColor(string hex)
   {
     borderColor = BorderColor.HEX(hex);
