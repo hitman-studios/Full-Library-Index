@@ -12,9 +12,7 @@
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/bin/Debug/net6.0/Libraries.pdb
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/staticwebassets.build.json
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/staticwebassets.development.json
-/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/scopedcss/VNumber.razor.rz.scp.css
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/scopedcss/bundle/RazorLibraries.styles.css
-/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/scopedcss/projectbundle/RazorLibraries.bundle.scp.css
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/RazorLibraries.csproj.CopyComplete
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/RazorLibraries.dll
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/ref/RazorLibraries.dll
