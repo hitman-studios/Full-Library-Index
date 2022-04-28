@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I1wcnlFCMotop3LfRatNB4FloLKcJo4M/BzfYDusayI=",
+  "Hash": "65IWLbABS/hq7uoj0CWlXu61bCIVQxUFzriwwQl7fuQ=",
   "Source": "BlazorProject",
   "BasePath": "/",
   "Mode": "Root",
@@ -323,7 +323,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.authorization/6.0.0/lib/net6.0/Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.authorization/6.0.4/lib/net6.0/Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
@@ -340,7 +340,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.components/6.0.0/lib/net6.0/Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.components/6.0.4/lib/net6.0/Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll",
@@ -629,7 +629,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.metadata/6.0.0/lib/net6.0/Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.aspnetcore.metadata/6.0.4/lib/net6.0/Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Routing.Abstractions.dll",
@@ -1071,7 +1071,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "/home/runner/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.1/lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Logging.Configuration.dll",
@@ -4253,6 +4253,23 @@
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Transactions.dll"
     },
     {
+      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/+UeUgaHh.gz",
+      "SourceId": "BlazorProject",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/+ZB+9inZ.gz",
       "SourceId": "BlazorProject",
       "SourceType": "Computed",
@@ -4814,6 +4831,23 @@
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Reflection.Primitives.dll"
     },
     {
+      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/7R9Jgh+e.gz",
+      "SourceId": "BlazorProject",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll"
+    },
+    {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/8IjBusnv.gz",
       "SourceId": "BlazorProject",
       "SourceType": "Computed",
@@ -5307,6 +5341,23 @@
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Runtime.CompilerServices.VisualC.dll"
     },
     {
+      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/C0W+vPcW.gz",
+      "SourceId": "BlazorProject",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/C9dVHVRa.gz",
       "SourceId": "BlazorProject",
       "SourceType": "Computed",
@@ -5713,23 +5764,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Security.Cryptography.Cng.dll"
-    },
-    {
-      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/gwKuUEHg.gz",
-      "SourceId": "BlazorProject",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/gwqyeHVK.gz",
@@ -6565,6 +6599,23 @@
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.ServiceProcess.dll"
     },
     {
+      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/mNBuwmG4.gz",
+      "SourceId": "BlazorProject",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll"
+    },
+    {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/Mog81E3c.gz",
       "SourceId": "BlazorProject",
       "SourceType": "Computed",
@@ -6869,23 +6920,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Threading.Channels.dll"
-    },
-    {
-      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/pBCpRZZL.gz",
-      "SourceId": "BlazorProject",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/pfA9LW3F.gz",
@@ -7874,23 +7908,6 @@
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.Extensions.Configuration.UserSecrets.dll"
     },
     {
-      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/Wcq7K7P1.gz",
-      "SourceId": "BlazorProject",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll"
-    },
-    {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/wgeTzsm9.gz",
       "SourceId": "BlazorProject",
       "SourceType": "Computed",
@@ -8110,23 +8127,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/System.Threading.Tasks.Dataflow.dll"
-    },
-    {
-      "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/xx1I3++w.gz",
-      "SourceId": "BlazorProject",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/runner/Full-Library-Index/Projects/BlazorProject/bin/Debug/net6.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/YeVpKbZy.gz",

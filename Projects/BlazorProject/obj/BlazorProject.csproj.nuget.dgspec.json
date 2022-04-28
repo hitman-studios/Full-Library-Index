@@ -164,9 +164,6 @@
             "projectReferences": {
               "/home/runner/Full-Library-Index/Libraries/Libraries.csproj": {
                 "projectPath": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj"
-              },
-              "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/RazorLibraries.csproj": {
-                "projectPath": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/RazorLibraries.csproj"
               }
             }
           }
@@ -181,6 +178,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -229,6 +234,9 @@
             "projectReferences": {
               "/home/runner/Full-Library-Index/Libraries/Libraries.csproj": {
                 "projectPath": "/home/runner/Full-Library-Index/Libraries/Libraries.csproj"
+              },
+              "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/RazorLibraries.CSS.csproj": {
+                "projectPath": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/RazorLibraries.CSS.csproj"
               }
             }
           }

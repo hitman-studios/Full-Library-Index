@@ -1,0 +1,10 @@
+﻿<div style=@($"color: {FontColor.GenerateCSS}; width: {ElementWidth.GenerateCSS()}; height: {ElementHeight.GenerateCSS()}; background: {BackgroundColor.GenerateCSS()}")>
+  @Content
+</div>
+@code {
+  [Parameter]public Measurement ElementWidth { get; set; } = Measurement.Auto();
+  [Parameter]public Measurement ElementHeight {get; set; } = Measurement.Auto();
+  [Parameter]public RenderFragment Content { get; set; } = @<p>hello world</p>;
+  [Parameter]public Color FontColor { get; set; } = Color.HEX("edc8b9");
+  [Parameter]public Color BackgroundColor { get; set; } = Color.HEX("000");
+}

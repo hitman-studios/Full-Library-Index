@@ -2,7 +2,7 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1 style=result>Hello, world!</h1>
+<VNumber Value=5.0/>
 
 Welcome to your new app.
 
@@ -11,6 +11,7 @@ Welcome to your new app.
   public string result = new CSSBuilder()
       .StartCreation()
       .WithLeftBorder(RazorLibraries.CSS.BorderStyle.Dotted,5,"px",50,50,50)
+      .WithRightBorder(RazorLibraries.CSS.BorderStyle.Inset,10,"px",30,50,80)
       .EndCreation()
       .Build();
 }

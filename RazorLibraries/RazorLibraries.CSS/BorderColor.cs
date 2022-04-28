@@ -11,7 +11,7 @@ using Libraries;
 /**
 */
 [TODO("ADD DOCUMENTATION.")]
-public sealed class BorderColor : IComponentStyle, IComparable<BorderColor>
+public sealed class Color : IComponentStyle, IComparable<Color>
 {
 /**
 */
@@ -35,14 +35,14 @@ public sealed class BorderColor : IComponentStyle, IComparable<BorderColor>
   public ColorType colorType { get; }
 /**
 */
-  public int CompareTo(BorderColor? other)
+  public int CompareTo(Color? other)
   {
     return other != null ? hexCode.CompareTo(other.hexCode) : 1;
   }
 /**
 */
   [TODO("ADD DOCUMENTATION.")]
-  private BorderColor(string hex)
+  private Color(string hex)
   {
     if(hex.Equals("Inherit"))
     {
@@ -72,7 +72,7 @@ public sealed class BorderColor : IComponentStyle, IComparable<BorderColor>
   }
 /**
 */
-  private BorderColor
+  private Color
   (byte r, byte g, byte b)
   {
     colorType = ColorType.RGB;
@@ -83,22 +83,22 @@ public sealed class BorderColor : IComponentStyle, IComparable<BorderColor>
   }
 /**
 */
-  public static BorderColor RGB(byte r, byte g, byte b)
+  public static Color RGB(byte r, byte g, byte b)
   {
-    return new BorderColor(r,g,b);
+    return new Color(r,g,b);
   }
 /**
 */
-  public static BorderColor HEX(string hex)
+  public static Color HEX(string hex)
   {
-    return new BorderColor(hex);
+    return new Color(hex);
   }
 /**
 */
-  public static BorderColor Inherit() => new BorderColor("Inherit");
+  public static Color Inherit() => new Color("Inherit");
 /**
 */
-  public static BorderColor Initial() => new BorderColor("Initial");
+  public static Color Initial() => new Color("Initial");
 /**
 */
   private string rgbToHex(byte r, byte g, byte b)

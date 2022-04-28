@@ -737,8 +737,6 @@
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/sFGOcS63.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/2BQnvIAI.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/V9Jl02Co.gz
-/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/Wcq7K7P1.gz
-/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/gwKuUEHg.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/wgzLQBA6.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/EysbFaDi.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/CDqbLfAh.gz
@@ -754,7 +752,6 @@
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/rfOofNaX.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/H+8YV9VD.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/I+EyRJhD.gz
-/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/xx1I3++w.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/30RjGpbP.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/8pXo7F1I.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/buNS9DgB.gz
@@ -780,7 +777,6 @@
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/jeFWm6H8.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/K2eIcv2O.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/b7qWDo5N.gz
-/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/pBCpRZZL.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/GzTeqz76.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/cnacAn7K.gz
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/SMg4P+Ik.gz
@@ -987,3 +983,7 @@
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/BlazorProject.dll
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/ref/BlazorProject.dll
 /home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/BlazorProject.pdb
+/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/C0W+vPcW.gz
+/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/mNBuwmG4.gz
+/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/+UeUgaHh.gz
+/home/runner/Full-Library-Index/Projects/BlazorProject/obj/Debug/net6.0/build-gz/7R9Jgh+e.gz

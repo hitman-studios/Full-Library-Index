@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Libraries.csproj" />
+    <ProjectReference Include="..\RazorLibraries.CSS\RazorLibraries.CSS.csproj" />
   </ItemGroup>
 
 </Project>

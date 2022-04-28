@@ -1,0 +1,10 @@
+<VisualElement Width=Width Height=Height FontColor=FontColor BackgroundColor=BackgroundColor>
+Value</VisualElement>
+
+@code {
+  [Parameter]public string Value { get; set; } = "";
+  [Parameter]public Measurement Width { get; set; } = Measurement.Auto();
+  [Parameter]public Measurement Height { get; set; } = Measurement.Auto();
+  [Parameter]public RazorLibraries.CSS.Color FontColor { get; set; } = RazorLibraries.CSS.Color.Inherit();
+  [Parameter]public RazorLibraries.CSS.Color BackgroundColor { get; set; } = RazorLibraries.CSS.Color.Inherit();
+}

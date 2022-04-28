@@ -19,3 +19,6 @@
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/RazorLibraries.dll
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/ref/RazorLibraries.dll
 /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/RazorLibraries.pdb
+/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/bin/Debug/net6.0/RazorLibraries.CSS.staticwebassets.runtime.json
+/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/bin/Debug/net6.0/RazorLibraries.CSS.dll
+/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/bin/Debug/net6.0/RazorLibraries.CSS.pdb

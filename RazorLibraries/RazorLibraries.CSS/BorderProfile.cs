@@ -23,44 +23,32 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
   }
   public BorderStyle borderStyle { get; private set;}
   public Measurement borderWidth { get; private set;}
-  public BorderColor borderColor { get; private set; }
-  private BorderProfile(BorderStyle style, Measurement measurement, [Optional]BorderColor color)
+  public Color borderColor { get; private set; }
+  private BorderProfile(BorderStyle style, Measurement measurement, Color color)
   {
     borderStyle = style;
     borderWidth = measurement;
-    borderColor = color != null ? (BorderColor)color : BorderColor.Inherit();
-  }
-  private BorderProfile(BorderStyle style)
-  {
-    borderStyle = style;
-    borderWidth = Measurement.Inherit();
-    borderColor = BorderColor.Inherit();
-  }
-  private BorderProfile(BorderStyle style, string hex)
-  {
-    borderStyle = style;
-    borderWidth = Measurement.Inherit();
-    borderColor = BorderColor.HEX(hex);
+    borderColor = color;
   }
   private BorderProfile(BorderStyle style, Measurement measurement)
   {
     borderStyle = style;
     borderWidth = measurement;
-    borderColor = BorderColor.Inherit();
+    borderColor = Color.Inherit();
   }
-  private BorderProfile(BorderStyle style, BorderColor color)
+  private BorderProfile(BorderStyle style, Color color)
   {
     borderStyle = style;
     borderWidth = Measurement.Inherit();
     borderColor = color;
   }
-  private BorderProfile(BorderStyle style, byte r, byte g, byte b)
+  private BorderProfile(BorderStyle style)
   {
     borderStyle = style;
     borderWidth = Measurement.Inherit();
-    borderColor = BorderColor.RGB(r,g,b);
+    borderColor = Color.Inherit();
   }
-  private BorderProfile(Measurement m, BorderColor c)
+  private BorderProfile(Measurement m, Color c)
   {
     borderStyle = BorderStyle.Inherit;
     borderWidth = m;
@@ -70,29 +58,61 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
   {
     borderStyle = BorderStyle.Inherit;
     borderWidth = m;
-    borderColor = BorderColor.Inherit();
+    borderColor = Color.Inherit();
+  }
+  private BorderProfile(Color c)
+  {
+    borderStyle = BorderStyle.Inherit;
+    borderWidth = Measurement.Inherit();
+    borderColor = c;
+  }
+  private BorderProfile()
+  {
+    borderStyle = BorderStyle.Inherit;
+    borderWidth = Measurement.Inherit();
+    borderColor = Color.Inherit();
   }
   public static BorderProfile Inherit()
   {
-    return new BorderProfile(BorderStyle.Inherit,Measurement.Inherit(),BorderColor.Inherit());
+    return new BorderProfile();
   }
   public static BorderProfile Initial()
   {
-    return new BorderProfile(BorderStyle.Initial,Measurement.Initial(),BorderColor.Initial());
+    return new BorderProfile(BorderStyle.Initial,Measurement.Initial(),Color.Initial());
   }
-  public static BorderProfile Create(BorderStyle style, Measurement m, BorderColor color)
+  public static BorderProfile Create(BorderStyle style, Measurement m, Color color)
   {
     return new BorderProfile(style,m,color);
   }
   public static BorderProfile Create(BorderStyle style, Measurement m)
   {
-    return new BorderProfile(style,m,BorderColor.Inherit());
+    return new BorderProfile(style,m,Color.Inherit());
+  }
+  public static BorderProfile Create(BorderStyle style)
+  {
+    return new BorderProfile(style);
+  }
+  public static BorderProfile Create(BorderStyle style, Color c)
+  {
+    return new BorderProfile(style, c);
+  }
+  public static BorderProfile Create(Measurement m, Color c)
+  {
+    return new BorderProfile(m,c);
+  }
+  public static BorderProfile Create(Measurement m)
+  {
+    return new BorderProfile(m);
+  }
+  public static BorderProfile Create(Color c)
+  {
+    return new BorderProfile(c);
   }
   // public static BorderProfile Create(BorderStyle style, Number length, string mType)
   // {
   //   return new BorderProfile(style,Measurement.Create(length,mType));
   // }
-  // public static BorderProfile Create(BorderStyle style, Measurement measurement, BorderColor color)
+  // public static BorderProfile Create(BorderStyle style, Measurement measurement, Color color)
   // {
   //   return new BorderProfile(style,measurement, color);
   // }
@@ -102,23 +122,23 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
   // }
   // public static BorderProfile Create(BorderStyle style, Number length, string mT, byte r, byte g, byte b)
   // {
-  //   return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.RGB(r,g,b));
+  //   return new BorderProfile(style, Measurement.Create(length, mT), Color.RGB(r,g,b));
   // }
   // public static BorderProfile Create(BorderStyle style, Number length, string mT, string hex)
   // {
-  //   return new BorderProfile(style, Measurement.Create(length, mT), BorderColor.HEX(hex));
+  //   return new BorderProfile(style, Measurement.Create(length, mT), Color.HEX(hex));
   // }
   public BorderProfile SetColor(string hex)
   {
-    borderColor = BorderColor.HEX(hex);
+    borderColor = Color.HEX(hex);
     return this;
   }
   public BorderProfile SetColor(byte r, byte g, byte b)
   {
-    borderColor = BorderColor.RGB(r,g,b);
+    borderColor = Color.RGB(r,g,b);
     return this;
   }
-  public BorderProfile SetColor(BorderColor c)
+  public BorderProfile SetColor(Color c)
   {
     borderColor = c;
     return this;
@@ -147,11 +167,11 @@ public sealed class BorderProfile : IComponentStyle, IComparable<BorderProfile>
   public bool HasBorder => borderStyleCSS.Equals("none");
   public override string ToString() => IsInitial ? "initial" : IsInherit ? "inherit" : HasBorder ?  $"({borderStyleCSS}, {borderWidthCSS}, {borderColorCSS})" : "none";
   public static implicit operator BorderProfile((BorderStyle s, Measurement m) setup) => new BorderProfile(setup.s, setup.m);
-  public static implicit operator BorderProfile((BorderStyle s, Measurement m, BorderColor c) setup) => new BorderProfile(setup.s, setup.m, setup.c);
-  public static implicit operator BorderProfile((BorderStyle s, Measurement m, string c) setup) => new BorderProfile(setup.s, setup.m, BorderColor.HEX(setup.c));
-  public static implicit operator BorderProfile((BorderStyle s, Measurement m, byte r, byte g, byte b) setup) => new BorderProfile(setup.s, setup.m, BorderColor.RGB(setup.r, setup.g, setup.b));
-  public static implicit operator BorderProfile((BorderStyle s, Number n, string mT, byte r, byte g, byte b) setup ) => new BorderProfile(setup.s, Measurement.Create(setup.n, setup.mT), BorderColor.RGB(setup.r, setup.g, setup.b));
-  public static implicit operator BorderProfile((BorderStyle s, Number n, string mT, string c) setup ) => new BorderProfile(setup.s, Measurement.Create(setup.n, setup.mT), BorderColor.HEX(setup.c));
+  public static implicit operator BorderProfile((BorderStyle s, Measurement m, Color c) setup) => new BorderProfile(setup.s, setup.m, setup.c);
+  public static implicit operator BorderProfile((BorderStyle s, Measurement m, string c) setup) => new BorderProfile(setup.s, setup.m, Color.HEX(setup.c));
+  public static implicit operator BorderProfile((BorderStyle s, Measurement m, byte r, byte g, byte b) setup) => new BorderProfile(setup.s, setup.m, Color.RGB(setup.r, setup.g, setup.b));
+  public static implicit operator BorderProfile((BorderStyle s, Number n, string mT, byte r, byte g, byte b) setup ) => new BorderProfile(setup.s, Measurement.Create(setup.n, setup.mT), Color.RGB(setup.r, setup.g, setup.b));
+  public static implicit operator BorderProfile((BorderStyle s, Number n, string mT, string c) setup ) => new BorderProfile(setup.s, Measurement.Create(setup.n, setup.mT), Color.HEX(setup.c));
   public static implicit operator BorderProfile((BorderStyle s, Number n, string mT) setup) => new BorderProfile(setup.s, Measurement.Create(setup.n,setup.mT));
-  public static implicit operator BorderProfile((BorderStyle s, string hex) setup) => new BorderProfile(setup.s, BorderColor.HEX(setup.hex));
+  public static implicit operator BorderProfile((BorderStyle s, string hex) setup) => new BorderProfile(setup.s, Color.HEX(setup.hex));
 }

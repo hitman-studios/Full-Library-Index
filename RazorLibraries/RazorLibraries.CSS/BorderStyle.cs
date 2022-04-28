@@ -26,14 +26,19 @@ public enum BorderStyle
 }
 public readonly struct Measurement : INumber, IEquatable<Measurement>,IEquatable<Number>,IEquatable<INumber>, IComparable<Measurement>,IComparable<Number>,IComparable<INumber>, IComponentStyle
 {
-  public string GenerateCSS() => IsInherit ? "inherit" : IsInitial ? "initial" : $"{Value.ToString()} {measurement}";
+  public string GenerateCSS() => IsAuto ? "auto" : IsInherit ? "inherit" : IsInitial ? "initial" : $"{Value.ToString()} {measurement}";
   public readonly Number Value { get; }
   public readonly string measurement { get; }
   private Measurement(Number v, string m)
   {
-    if(v < 0.0)
+    if(v == -2.0)
     {
       measurement = "Inherit";
+      Value = 0;
+    }
+    else if(v == -1.0)
+    {
+      measurement = "Auto";
       Value = 0;
     }
     else if(v == 0.0) 
@@ -51,12 +56,14 @@ public readonly struct Measurement : INumber, IEquatable<Measurement>,IEquatable
   {
     return new Measurement(n,s.ToLower().IsMeasurement() ? s.ToLower() : "px");
   }
-  public static Measurement Inherit() => new Measurement(-1.0,"");
+  public static Measurement Auto() => new Measurement(-1.0,"");
+  public static Measurement Inherit() => new Measurement(-2.0,"");
   public static Measurement Initial() => new Measurement(0.0,"");
   public Number ToNumber() => Value;
   public bool IsInitial => Value == 0.0d;
-  public bool IsInherit => Value < 0.0d;
-  public override string ToString() => IsInherit ? "Inherit" : IsInitial ? "Initial" : $"{Value.iValue} {measurement}";
+  public bool IsInherit => Value < -1.0d;
+  public bool IsAuto => measurement.Equals("auto");
+  public override string ToString() => IsAuto ? "Auto" : IsInherit ? "Inherit" : IsInitial ? "Initial" : $"{Value.iValue} {measurement}";
   // public override bool Equals(object obj) => 
   public bool Equals(Measurement other) => Value == other.Value && measurement.Equals(other.measurement);
   public bool Equals(Number other) => Value == other;

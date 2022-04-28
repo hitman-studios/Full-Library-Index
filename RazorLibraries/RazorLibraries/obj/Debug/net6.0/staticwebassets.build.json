@@ -1,12 +1,31 @@
 {
   "Version": 1,
-  "Hash": "IaPf5H6LP9CjEWe8p+FcTAbv3697c8gRzdGdIjwTBxg=",
+  "Hash": "d15t+G3PHj6J1znPmS3PKeiRFsQi4ygo02GCRamWfs4=",
   "Source": "RazorLibraries",
   "BasePath": "_content/RazorLibraries",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/RazorLibraries.CSS.csproj",
+      "Version": 2,
+      "Source": "RazorLibraries.CSS",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
+    {
+      "Name": "RazorLibraries.CSS/wwwroot",
+      "Source": "RazorLibraries.CSS",
+      "ContentRoot": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/wwwroot/",
+      "BasePath": "_content/RazorLibraries.CSS",
+      "Pattern": "**"
+    },
     {
       "Name": "RazorLibraries/wwwroot",
       "Source": "RazorLibraries",
@@ -16,6 +35,57 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/obj/Debug/net6.0/scopedcss/projectbundle/RazorLibraries.CSS.bundle.scp.css",
+      "SourceId": "RazorLibraries.CSS",
+      "SourceType": "Project",
+      "ContentRoot": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "BasePath": "_content/RazorLibraries.CSS",
+      "RelativePath": "RazorLibraries.CSS.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/obj/Debug/net6.0/scopedcss/projectbundle/RazorLibraries.CSS.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/wwwroot/background.png",
+      "SourceId": "RazorLibraries.CSS",
+      "SourceType": "Project",
+      "ContentRoot": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/wwwroot/",
+      "BasePath": "_content/RazorLibraries.CSS",
+      "RelativePath": "background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/background.png"
+    },
+    {
+      "Identity": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/wwwroot/exampleJsInterop.js",
+      "SourceId": "RazorLibraries.CSS",
+      "SourceType": "Project",
+      "ContentRoot": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries.CSS/wwwroot/",
+      "BasePath": "_content/RazorLibraries.CSS",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/exampleJsInterop.js"
+    },
     {
       "Identity": "/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/obj/Debug/net6.0/scopedcss/bundle/RazorLibraries.styles.css",
       "SourceId": "RazorLibraries",

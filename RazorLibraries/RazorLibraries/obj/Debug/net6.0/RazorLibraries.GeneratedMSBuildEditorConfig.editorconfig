@@ -15,10 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/runner/Full-Library-Index/RazorLibraries/RazorLibraries
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/Text.razor]
+build_metadata.AdditionalFiles.TargetPath = VGV4dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/VFunction.razor]
+build_metadata.AdditionalFiles.TargetPath = VkZ1bmN0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/VList.razor]
+build_metadata.AdditionalFiles.TargetPath = Vkxpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/VNumber.razor]
 build_metadata.AdditionalFiles.TargetPath = Vk51bWJlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-ttm57yafru
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/VTable.razor]
+build_metadata.AdditionalFiles.TargetPath = VlRhYmxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/Full-Library-Index/RazorLibraries/RazorLibraries/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope =

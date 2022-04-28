@@ -159,7 +159,7 @@ public record struct Border(BorderProfile Profile, BorderSides Sides) : ICompara
 /**
 */
   [TODO("ADD ALL BorderProfile constructors.")]
-  public Border SetProfile(BorderStyle style, Measurement m, BorderColor color)
+  public Border SetProfile(BorderStyle style, Measurement m, Color color)
   {
     Profile = Profile.SetStyle(style).SetWidth(m).SetColor(color);
     return this;
@@ -173,7 +173,7 @@ public record struct Border(BorderProfile Profile, BorderSides Sides) : ICompara
   }
 /**
 */
-  public Border SetColor(BorderColor c)
+  public Border SetColor(Color c)
   {
     Profile.SetColor(c);
     return this;

@@ -1,7 +1,10 @@
-﻿<div class="">
-    This component is defined in the <strong>RazorLibraries</strong> library.
-</div>
+﻿<VisualElement ElementWidth=Width ElementHeight=Height FontColor=FontColor>Value
+</VisualElement>
 @code
 {
-  [Parameter] public string ClassStyle {get; set; } = "";
+  [Parameter] public Number Value { get; set; } = 0.0;
+  [Parameter] public Measurement Width { get; set; } = Measurement.Auto();
+  [Parameter] public Measurement Height { get; set; } = Measurement.Auto();
+  [Parameter] public RazorLibraries.CSS.Color FontColor { get; set; } = RazorLibraries.CSS.Color.Inherit();
+  [Parameter] public RazorLibraries.CSS.Color BackgroundColor { get; set; } = RazorLibraries.CSS.Color.Inherit();
 }

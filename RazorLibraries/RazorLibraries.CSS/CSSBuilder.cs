@@ -76,22 +76,22 @@ public sealed class CSSBuilder
       this.left = left;
       return this;
     }
-    public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width, BorderColor color)
+    public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width, Color color)
     {
       this.left = BorderProfile.Create(style,width,color);
       return this;
     }
-    public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType, BorderColor color)
+    public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType, Color color)
     {
       return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Create(width,mType),color));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType, string hex)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.HEX(hex)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Create(width,mType),Color.HEX(hex)));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.RGB(r,g,b)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Create(width,mType),Color.RGB(r,g,b)));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Number width, string mType)
     {
@@ -99,55 +99,55 @@ public sealed class CSSBuilder
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, string hex)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Inherit(),BorderColor.HEX(hex)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Inherit(),Color.HEX(hex)));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Inherit(),BorderColor.RGB(r,g,b)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Inherit(),Color.RGB(r,g,b)));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width, string hex)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,BorderColor.HEX(hex)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,Color.HEX(hex)));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,BorderColor.RGB(r,g,b)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,Color.RGB(r,g,b)));
     }
-    public BuilderInternals WithLeftBorder(BorderStyle style, BorderColor color)
+    public BuilderInternals WithLeftBorder(BorderStyle style, Color color)
     {
       return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,Measurement.Inherit(),color));
     }
     public BuilderInternals WithLeftBorder(BorderStyle style, Measurement width)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,BorderColor.Inherit()));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(style,width,Color.Inherit()));
     }
-    public BuilderInternals WithLeftBorder(Measurement m, BorderColor c)
+    public BuilderInternals WithLeftBorder(Measurement m, Color c)
     {
       return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,c));
     }
     public BuilderInternals WithLeftBorder(Measurement m, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.RGB(r,g,b)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,Color.RGB(r,g,b)));
     }
     public BuilderInternals WithLeftBorder(Measurement m, string hex)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.HEX(hex)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,Color.HEX(hex)));
     }
     public BuilderInternals WithLeftBorder(Measurement m)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.Inherit()));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,m,Color.Inherit()));
     }
-    public BuilderInternals WithLeftBorder(BorderColor c)
+    public BuilderInternals WithLeftBorder(Color c)
     {
       return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,Measurement.Inherit(),c));
     }
     public BuilderInternals WithLeftBorder(byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,Measurement.Inherit(),BorderColor.RGB(r,g,b)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,Measurement.Inherit(),Color.RGB(r,g,b)));
     }
     public BuilderInternals WithLeftBorder(string hex)
     {
-      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,Measurement.Inherit(),BorderColor.HEX(hex)));
+      return new BuilderInternals(top,right,bottom,BorderProfile.Create(BorderStyle.Inherit,Measurement.Inherit(),Color.HEX(hex)));
     }
     public BuilderInternals WithLeftBorder()
     {
@@ -157,72 +157,72 @@ public sealed class CSSBuilder
     {
       return new BuilderInternals(top,right,bottom,left);
     }
-    public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, BorderColor c) 
+    public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, Color c) 
     {
       return new BuilderInternals(top,BorderProfile.Create(style,m,c));
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, string hex)
     {
-      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.HEX(hex)),bottom,left);
+      return new BuilderInternals(top,BorderProfile.Create(style,m,Color.HEX(hex)),bottom,left);
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Measurement m, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.RGB(r,g,b)),bottom, left);
+      return new BuilderInternals(top,BorderProfile.Create(style,m,Color.RGB(r,g,b)),bottom, left);
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Measurement m)
     {
-      return new BuilderInternals(top,BorderProfile.Create(style,m,BorderColor.Inherit()),bottom,left);
+      return new BuilderInternals(top,BorderProfile.Create(style,m,Color.Inherit()),bottom,left);
     }
-    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, BorderColor c)
+    public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, Color c)
     {
       return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),c),bottom,left);
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, string hex)
     {
-      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.HEX(hex)),bottom,left);
+      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),Color.HEX(hex)),bottom,left);
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b)
     {
-      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),BorderColor.RGB(r,g,b)),bottom, left);
+      return new BuilderInternals(top,BorderProfile.Create(style,Measurement.Create(width,mType),Color.RGB(r,g,b)),bottom, left);
     }
     public BuilderInternals WithRightBorder(BorderStyle style, Number width, string mType)
     {
       right = BorderProfile.Create(style,Measurement.Create(width,mType));
       return this;
     }
-    public BuilderInternals WithRightBorder(BorderStyle style, BorderColor color) 
+    public BuilderInternals WithRightBorder(BorderStyle style, Color color) 
     {
       right = BorderProfile.Create(style,Measurement.Inherit(),color);
       return this;
     }
     public BuilderInternals WithRightBorder(BorderStyle style, string hex) 
     {
-      right = BorderProfile.Create(style, Measurement.Inherit(),BorderColor.HEX(hex));
+      right = BorderProfile.Create(style, Measurement.Inherit(),Color.HEX(hex));
       return this;
     }
     public BuilderInternals WithRightBorder(BorderStyle style, byte r, byte g, byte b)
     {
-      right = BorderProfile.Create(style, Measurement.Inherit(), BorderColor.RGB(r,g,b));
+      right = BorderProfile.Create(style, Measurement.Inherit(), Color.RGB(r,g,b));
       return this;
     }
     public BuilderInternals WithRightBorder(BorderStyle style) 
     {
-      right = BorderProfile.Create(style, Measurement.Inherit(), BorderColor.Inherit());
+      right = BorderProfile.Create(style, Measurement.Inherit(), Color.Inherit());
       return this;
     }
-    public BuilderInternals WithRightBorder(Measurement m, BorderColor color)
+    public BuilderInternals WithRightBorder(Measurement m, Color color)
     {
       right = BorderProfile.Create(BorderStyle.Inherit,m, color);
       return this;
     }
     public BuilderInternals WithRightBorder(Measurement m, string hex)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.HEX(hex));
+      right = BorderProfile.Create(BorderStyle.Inherit,m,Color.HEX(hex));
       return this;
     }
     public BuilderInternals WithRightBorder(Measurement m, byte r, byte g, byte b)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit,m,BorderColor.RGB(r,g,b));
+      right = BorderProfile.Create(BorderStyle.Inherit,m,Color.RGB(r,g,b));
       return this;
     }
     public BuilderInternals WithRightBorder(Measurement m)
@@ -230,19 +230,19 @@ public sealed class CSSBuilder
       right = BorderProfile.Create(BorderStyle.Inherit, m);
       return this;
     }
-    public BuilderInternals WithRightBorder(Number width, string mType, BorderColor c)
+    public BuilderInternals WithRightBorder(Number width, string mType, Color c)
     {
       right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType), c);
       return this;
     }
     public BuilderInternals WithRightBorder(Number width, string mType, string hex)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType), BorderColor.HEX(hex));
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType), Color.HEX(hex));
       return this;
     }
     public BuilderInternals WithRightBorder(Number width, string mType, byte r, byte g, byte b)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width, mType), BorderColor.RGB(r,g,b));
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width, mType), Color.RGB(r,g,b));
       return this;
     }
     public BuilderInternals WithRightBorder(Number width, string mType)
@@ -250,19 +250,19 @@ public sealed class CSSBuilder
       right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Create(width,mType));
       return this;
     }
-    public BuilderInternals WithRightBorder(BorderColor color)
+    public BuilderInternals WithRightBorder(Color color)
     {
       right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), color);
       return this;
     }
     public BuilderInternals WithRightBorder(string hex)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), BorderColor.HEX(hex));
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), Color.HEX(hex));
       return this;
     }
     public BuilderInternals WithRightBorder(byte r, byte g, byte b)
     {
-      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), BorderColor.RGB(r,g,b));
+      right = BorderProfile.Create(BorderStyle.Inherit, Measurement.Inherit(), Color.RGB(r,g,b));
       return this;
     }
     public BuilderInternals WithRightBorder()
@@ -270,52 +270,237 @@ public sealed class CSSBuilder
       right = BorderProfile.Inherit();
       return this;
     }
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, string hex){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, string hex){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType){}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, BorderColor color) {}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, string hex) {}
-    // public BuilderInternals WithBottomBorder(BorderStyle style, byte r, byte g, byte b) {}
-    // public BuilderInternals WithBottomBorder(BorderStyle style) {}
-    // public BuilderInternals WithBottomBorder(Measurement m, BorderColor color){}
-    // public BuilderInternals WithBottomBorder(Measurement m, string hex){}
-    // public BuilderInternals WithBottomBorder(Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithBottomBorder(Measurement m){}
-    // public BuilderInternals WithBottomBorder(Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithBottomBorder(Number width, string mType, string hex){}
-    // public BuilderInternals WithBottomBorder(Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithBottomBorder(Number width, string mType){}
-    // public BuilderInternals WithBottomBorder(BorderColor color) {}
-    // public BuilderInternals WithBottomBorder(string hex) {}
-    // public BuilderInternals WithBottomBorder(byte r, byte g, byte b) {}
-    // public BuilderInternals WithBottomBorder() {}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Measurement m, string hex){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Measurement m){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, string hex){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType){}
-    // public BuilderInternals WithTopBorder(BorderStyle style, BorderColor color) {}
-    // public BuilderInternals WithTopBorder(BorderStyle style, string hex) {}
-    // public BuilderInternals WithTopBorder(BorderStyle style, byte r, byte g, byte b) {}
-    // public BuilderInternals WithTopBorder(BorderStyle style) {}
-    // public BuilderInternals WithTopBorder(Measurement m, BorderColor color){}
-    // public BuilderInternals WithTopBorder(Measurement m, string hex){}
-    // public BuilderInternals WithTopBorder(Measurement m, byte r, byte g, byte b){}
-    // public BuilderInternals WithTopBorder(Measurement m){}
-    // public BuilderInternals WithTopBorder(Number width, string mType, BorderColor c){}
-    // public BuilderInternals WithTopBorder(Number width, string mType, string hex){}
-    // public BuilderInternals WithTopBorder(Number width, string mType, byte r, byte g, byte b){}
-    // public BuilderInternals WithTopBorder(Number width, string mType){}
-    // public BuilderInternals WithTopBorder(BorderColor color) {}
-    // public BuilderInternals WithTopBorder(string hex) {}
-    // public BuilderInternals WithTopBorder(byte r, byte g, byte b) {}
-    // public BuilderInternals WithTopBorder() {}
+    public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, Color color)
+    {
+      bottom = BorderProfile.Create(style,m,color);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, string hex)
+    {
+      bottom = BorderProfile.Create(style,m,Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m, byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(style,m,Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Measurement m)
+    {
+      bottom = BorderProfile.Create(style,m);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, Color c)
+    {
+      bottom = BorderProfile.Create(style, Measurement.Create(width,mType),c);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, string hex)
+    {
+      bottom = BorderProfile.Create(style, Measurement.Create(width,mType),Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(style, Measurement.Create(width,mType), Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Number width, string mType)
+    {
+      bottom = BorderProfile.Create(style, Measurement.Create(width,mType));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, Color color)
+    {
+      bottom = BorderProfile.Create(style, color);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, string hex)
+    {
+      bottom = BorderProfile.Create(style,Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style, byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(style,Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(BorderStyle style)
+    {
+      bottom = BorderProfile.Create(style);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Measurement m, Color color)
+    {
+      bottom = BorderProfile.Create(m,color);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Measurement m, string hex)
+    {
+      bottom = BorderProfile.Create(m,Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Measurement m, byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(m,Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Measurement m)
+    {
+      bottom = BorderProfile.Create(m);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Number width, string mType, Color c)
+    {
+      bottom = BorderProfile.Create(Measurement.Create(width,mType),c);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Number width, string mType, string hex)
+    {
+      bottom = BorderProfile.Create(Measurement.Create(width,mType),Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Number width, string mType, byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(Measurement.Create(width,mType),Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Number width, string mType)
+    {
+      bottom = BorderProfile.Create(Measurement.Create(width,mType));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(Color color)
+    {
+      bottom = BorderProfile.Create(color);
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(string hex)
+    {
+      bottom = BorderProfile.Create(Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder(byte r, byte g, byte b)
+    {
+      bottom = BorderProfile.Create(Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithBottomBorder()
+    {
+      bottom = BorderProfile.Inherit();
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Measurement m, Color c)
+    {
+      top = BorderProfile.Create(style, m,c);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Measurement m, string hex)
+    {
+      top = BorderProfile.Create(style,m,Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Measurement m, byte r, byte g, byte b)
+    {
+      top = BorderProfile.Create(style,m,Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Measurement m)
+    {
+      top = BorderProfile.Create(style,m);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, Color c)
+    {
+      top = BorderProfile.Create(style, Measurement.Create(width,mType),c);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, string hex)
+    {
+      top = BorderProfile.Create(style,Measurement.Create(width,mType),Color.HEX(hex));
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType, byte r, byte g, byte b)
+    {
+      top = BorderProfile.Create(style,Measurement.Create(width,mType),Color.RGB(r,g,b));
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Number width, string mType)
+    {
+      top = BorderProfile.Create(style,Measurement.Create(width,mType));
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, Color color)
+    {
+      top = BorderProfile.Create(style,color);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, string hex)
+    {
+      return WithTopBorder(style,Color.HEX(hex));
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style, byte r, byte g, byte b)
+    {
+      return WithTopBorder(style,Color.RGB(r,g,b));
+    }
+    public BuilderInternals WithTopBorder(BorderStyle style)
+    {
+      top = BorderProfile.Create(style);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(Measurement m, Color color)
+    {
+      top = BorderProfile.Create(m,color);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(Measurement m, string hex)
+    {
+      return WithTopBorder(m,Color.HEX(hex));
+    }
+    public BuilderInternals WithTopBorder(Measurement m, byte r, byte g, byte b)
+    {
+      return WithTopBorder(m,Color.RGB(r,g,b));
+    }
+    public BuilderInternals WithTopBorder(Measurement m)
+    {
+      top = BorderProfile.Create(m);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(Number width, string mType, Color c)
+    {
+      top = BorderProfile.Create(Measurement.Create(width,mType),c);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(Number width, string mType, string hex)
+    {
+      return WithTopBorder(width,mType,Color.HEX(hex));
+    }
+    public BuilderInternals WithTopBorder(Number width, string mType, byte r, byte g, byte b)
+    {
+      return WithTopBorder(width,mType,Color.RGB(r,g,b));
+    }
+    public BuilderInternals WithTopBorder(Number width, string mType)
+    {
+      return WithTopBorder(Measurement.Create(width,mType));
+    }
+    public BuilderInternals WithTopBorder(Color color)
+    {
+      top = BorderProfile.Create(color);
+      return this;
+    }
+    public BuilderInternals WithTopBorder(string hex)
+    {
+      return WithTopBorder(Color.HEX(hex));
+    }
+    public BuilderInternals WithTopBorder(byte r, byte g, byte b)
+    {
+      return WithTopBorder(Color.RGB(r,g,b));
+    }
+    public BuilderInternals WithTopBorder()
+    {
+      top = BorderProfile.Inherit();
+      return this;
+    }
     public BuilderInternals WithTopBorder(BorderProfile top)
     {
       return new BuilderInternals(top,right,bottom,left);
@@ -323,6 +508,29 @@ public sealed class CSSBuilder
     public BuilderInternals WithBottomBorder(BorderProfile bottom)
     {
       return new BuilderInternals(top,right,bottom,left);
+    }
+    public BuilderInternals WithBorders(BorderProfile a)
+    {
+      top = a;
+      right = a;
+      bottom = a;
+      left = a;
+      return this;
+    }
+    public BuilderInternals WithBorders(BorderProfile a, BorderProfile b) {
+      top = a;
+      right = b;
+      bottom = a;
+      left = b;
+      return this;
+    }
+    public BuilderInternals WithBorders(BorderProfile a, BorderProfile b, BorderProfile c, BorderProfile d)
+    {
+      top = a;
+      right = b;
+      bottom = c;
+      left = d;
+      return this;
     }
     #nullable disable
     public CSSBuilder EndCreation()

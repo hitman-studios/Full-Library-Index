@@ -6,7 +6,7 @@ using Libraries.Modeling;
 namespace RazorLibraries;
 public partial class VNumber : INumber
 {
-  public Number Value { get; set; } = 0.0;
-  public Number ToNumber() => Value;
-  public static explicit operator Number(VNumber v) => v.Value;
+  public Number nValue { get => Value; set => Value = value; }
+  public Number ToNumber() => nValue;
+  public static explicit operator Number(VNumber v) => v.nValue;
 }

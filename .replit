@@ -1,5 +1,5 @@
-run = "cd Libraries/ && dotnet build  && cd ~/Full-Library-Index/Tests/Test1/ && dotnet test && cd ~/Full-Library-Index/Projects/Main/ && dotnet run"
-entrypoint = "Libraries/Class1.cs"
+run = "cd Projects/BlazorProject/ && dotnet watch run"
+entrypoint = "RazorLibraries/RazorLibraries/VList.razor"
 
 hidden = ["bin", "obj"]
 

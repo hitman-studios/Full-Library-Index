@@ -1,0 +1,25 @@
+@typeparam TValue
+<VisualElement Width=Width Height=Height FontColor=FontColor BackgroundColor=BackgroundColor>
+<table>
+  <thead>
+    @if(Header != null) { <tr>@Header</tr> }
+  </thead>
+  @foreach(TValue item in Items) {
+   <tr>@Content(item)</tr>
+  }
+  <tfoot>
+    @if(Footer != null) { <tr>@Footer</tr> }
+  </tfoot>
+</table>
+</VisualElement>
+@code {
+  [Parameter]public TValue[] Items { get; set; }
+  [Parameter]public RenderFragment Header { get; set; }
+  [Parameter]public RenderFragment<TValue> Content { get; set; }
+  [Parameter]public RenderFragment Footer { get; set; }
+  [Parameter]public Measurement Width { get; set; } = Measurement.Auto();
+  [Parameter]public Measurement Height { get; set; } = Measurement.Auto();
+  [Parameter]public RazorLibraries.CSS.Color FontColor { get; set; } = RazorLibraries.CSS.Color.Inherit();
+  [Parameter]public RazorLibraries.CSS.Color BackgroundColor { get; set; } = RazorLibraries.CSS.Color.HEX("000000");
+
+}

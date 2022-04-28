@@ -28,7 +28,7 @@ public static class Measurements
   {
     foreach(T item in objs)
     {
-      if(obj.Equals(item)) return true;
+      if(obj != null && item != null && obj.Equals(item)) return true;
       else continue;
     }
     return false;

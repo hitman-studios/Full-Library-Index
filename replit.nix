@@ -3,5 +3,6 @@
 		pkgs.dotnet-sdk
     pkgs.omnisharp-roslyn
     pkgs.mono
+    pkgs.sudo
 	];
 }

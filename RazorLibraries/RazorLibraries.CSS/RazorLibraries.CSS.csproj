@@ -12,11 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RazorLibraries\RazorLibraries.csproj" />
     <ProjectReference Include="..\..\Libraries\Libraries.csproj" />
   </ItemGroup>
 
